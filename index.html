@@ -1,0 +1,623 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LED Planet KRR</title>
+<meta name="description" content="Explore LED lighting, hanging lights, decorative lamps and chandeliers at LED Planet KRR in Karur. Contact us to enquire about available products.">
+<meta property="og:title" content="LED Planet KRR | LED Lights, Hanging Lights & Decorative Lamps">
+<meta property="og:description" content="Explore LED lighting, hanging lights, decorative lamps and chandeliers at LED Planet KRR in Karur.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+<style>
+/* Layout concept: a single scrolling showroom page, alternating ivory and charcoal
+   bands, a centered 1180px content column, and large photography-led cards. */
+:root{
+  --bg:#F6F3EE; --surface:#FFFFFF; --surface-2:#EFEAE0;
+  --fg:#171717; --muted:#6B6558;
+  --accent:#A97C2E; --accent-soft:#D6AD65;
+  --border:rgba(23,23,23,.12);
+  --charcoal:#171717; --on-charcoal:#F3EFE6; --on-charcoal-muted:#B9B2A3;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#15130F; --surface:#1C1A15; --surface-2:#211E18;
+    --fg:#F3EFE6; --muted:#AFA896;
+    --accent:#E7C178; --accent-soft:#D6AD65;
+    --border:rgba(243,239,230,.16);
+    --charcoal:#0E0D0A; --on-charcoal:#F3EFE6; --on-charcoal-muted:#AFA896;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15130F; --surface:#1C1A15; --surface-2:#211E18;
+  --fg:#F3EFE6; --muted:#AFA896;
+  --accent:#E7C178; --accent-soft:#D6AD65;
+  --border:rgba(243,239,230,.16);
+  --charcoal:#0E0D0A; --on-charcoal:#F3EFE6; --on-charcoal-muted:#AFA896;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;margin:0;line-height:1.6}
+h1,h2,h3,.font-display{font-family:'Fraunces',Georgia,serif}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+.section{padding-block:72px}
+@media (max-width:640px){.section{padding-block:48px}}
+.bg-surface{background:var(--surface)}
+.bg-surface2{background:var(--surface-2)}
+.bg-charcoal{background:var(--charcoal);color:var(--on-charcoal)}
+.text-muted{color:var(--muted)}
+.on-charcoal .text-muted{color:var(--on-charcoal-muted)}
+.text-accent{color:var(--accent)}
+.border-token{border-color:var(--border)}
+.eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.h1{font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:600;line-height:1.08}
+.h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:600;line-height:1.15}
+.h3{font-size:1.2rem;font-weight:600}
+.lede{font-size:1.05rem;color:var(--muted);max-width:640px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:.92rem;padding:13px 26px;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease,border-color .15s ease,color .15s ease}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn-primary{background:var(--charcoal);color:var(--on-charcoal)}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--accent-soft);color:#171717}
+.btn-gold:hover{transform:translateY(-1px)}
+.btn-outline{background:transparent;border-color:currentColor}
+.btn-outline:hover{background:rgba(255,255,255,.06)}
+.btn-outline-dark{background:transparent;border-color:var(--fg);color:var(--fg)}
+.btn-outline-dark:hover{background:var(--surface-2)}
+a{color:inherit}
+img{display:block}
+.img-cover{width:100%;height:100%;object-fit:cover}
+.chip{font-size:.85rem;padding:8px 16px;border-radius:999px;border:1px solid var(--border);background:var(--surface);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.chip[aria-pressed="true"]{background:var(--charcoal);color:var(--on-charcoal);border-color:var(--charcoal)}
+.icon-circle{width:44px;height:44px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:var(--surface-2);color:var(--accent);flex-shrink:0}
+.reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+.reveal.pre{opacity:0;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){.reveal{transition:none !important}}
+.hover-zoom{overflow:hidden}
+.hover-zoom img{transition:transform .5s ease}
+.hover-zoom:hover img{transform:scale(1.05)}
+@media (prefers-reduced-motion:reduce){.hover-zoom:hover img{transform:none}}
+summary{list-style:none;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+.faq-item summary .chev{transition:transform .25s ease}
+.faq-item[open] summary .chev{transform:rotate(180deg)}
+.faq-item[open] .faq-body{margin-top:10px}
+dialog::backdrop{background:rgba(10,10,8,.55)}
+dialog{border:none;padding:0;background:transparent;max-width:min(640px,92vw);width:100%}
+.input{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:3px;background:var(--surface);color:var(--fg);font:inherit}
+.input:focus-visible,.input:focus{outline:2px solid var(--accent);outline-offset:1px}
+label.field-label{font-size:.82rem;font-weight:600;margin-bottom:6px;display:block}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--charcoal);color:var(--on-charcoal);padding:10px 16px;z-index:100}
+.skip-link:focus{left:12px;top:12px}
+#mobileMenu{transition:max-height .3s ease}
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:40;width:56px;height:56px;border-radius:999px;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.wa-fab:hover{transform:translateY(-2px)}
+.badge-sample{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:3px 9px}
+</style>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- NAVBAR -->
+<header id="top" class="fixed top-0 inset-x-0 z-50 bg-surface border-b border-token" style="background:color-mix(in srgb, var(--surface) 92%, transparent);backdrop-filter:blur(8px)">
+  <div class="wrap flex items-center justify-between" style="height:72px">
+    <a href="#top" class="flex items-baseline gap-2">
+      <span class="font-display font-semibold" style="font-size:1.35rem;letter-spacing:.02em">LED PLANET</span>
+      <span class="text-accent text-xs font-semibold tracking-wide">KRR · Karur</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#top" class="hover:text-accent transition-colors">Home</a>
+      <a href="#categories" class="hover:text-accent transition-colors">Categories</a>
+      <a href="#products" class="hover:text-accent transition-colors">Products</a>
+      <a href="#about" class="hover:text-accent transition-colors">About</a>
+      <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+    </nav>
+    <div class="hidden md:block">
+      <button class="btn btn-gold" onclick="openWhatsApp('Hello LED Planet, I would like to enquire about your lighting products.')">Enquire Now</button>
+    </div>
+    <button id="menuBtn" class="md:hidden icon-circle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMobileMenu()">
+      <svg id="menuIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden overflow-hidden border-t border-token bg-surface" style="max-height:0">
+    <nav class="wrap flex flex-col py-4 gap-4 text-sm font-medium">
+      <a href="#top" onclick="closeMobileMenu()">Home</a>
+      <a href="#categories" onclick="closeMobileMenu()">Categories</a>
+      <a href="#products" onclick="closeMobileMenu()">Products</a>
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <button class="btn btn-gold w-full" onclick="openWhatsApp('Hello LED Planet, I would like to enquire about your lighting products.')">Enquire Now</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" style="padding-top:72px">
+
+<!-- HERO -->
+<section class="bg-charcoal">
+  <div class="wrap grid md:grid-cols-2 gap-10 items-center section">
+    <div class="reveal order-2 md:order-1">
+      <p class="eyebrow mb-4">LED Planet · Karur</p>
+      <h1 class="h1" style="color:var(--on-charcoal)">Illuminate Your World.</h1>
+      <p class="mt-5 text-base md:text-lg" style="color:var(--on-charcoal-muted);max-width:520px">Discover stylish LED lighting, statement hanging lights, decorative lamps and lighting solutions for every space.</p>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="#products" class="btn btn-gold">Explore Collection</a>
+        <button class="btn btn-outline" style="color:var(--on-charcoal)" onclick="openWhatsApp('Hello LED Planet, I would like to enquire about your lighting products.')">Enquire on WhatsApp</button>
+      </div>
+      <p class="mt-6 text-sm" style="color:var(--on-charcoal-muted)">Lighting for modern spaces and everyday living.</p>
+    </div>
+    <div class="reveal order-1 md:order-2 hover-zoom rounded" style="border-radius:4px">
+      <img src="images/hero-pendants.jpg" alt="Cluster of warm brass pendant lights hanging at different heights" class="img-cover" style="aspect-ratio:4/5;border-radius:4px">
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="section bg-bg">
+  <div class="wrap">
+    <div class="reveal max-w-xl mb-12">
+      <p class="eyebrow mb-3">Categories</p>
+      <h2 class="h2">Explore Our Lighting Collection</h2>
+      <p class="lede mt-3">Find the right lighting for your space, style and needs.</p>
+    </div>
+    <div id="categoryGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section bg-surface2">
+  <div class="wrap">
+    <div class="reveal max-w-xl mb-10">
+      <p class="eyebrow mb-3">Catalogue</p>
+      <h2 class="h2">Find Your Perfect Light</h2>
+      <p class="lede mt-3">Browse sample lighting from our range. Tap any product to enquire — availability and pricing are confirmed directly with our team.</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-center gap-4 mb-8">
+      <div class="relative flex-1 max-w-sm">
+        <svg class="absolute" style="left:12px;top:50%;transform:translateY(-50%)" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="productSearch" type="search" class="input" style="padding-left:38px" placeholder="Search products…" oninput="renderProducts()" aria-label="Search products">
+      </div>
+      <div id="categoryChips" class="flex flex-wrap gap-2"></div>
+    </div>
+
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+    <p id="noResults" hidden class="text-muted text-center py-10">No products match your search. Try a different name or category.</p>
+  </div>
+</section>
+
+<!-- ABOUT + WHY CHOOSE US -->
+<section id="about" class="section bg-bg">
+  <div class="wrap">
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div class="reveal hover-zoom order-2 md:order-1">
+        <img src="images/about-room.jpg" alt="Warm glowing dome table lamp lighting a room" class="img-cover" style="aspect-ratio:4/3;border-radius:4px">
+      </div>
+      <div class="reveal order-1 md:order-2">
+        <p class="eyebrow mb-3">About Us</p>
+        <h2 class="h2 mb-4">Lighting That Fits Your Space</h2>
+        <p class="text-muted" style="font-size:1.02rem">LED Planet KRR is a lighting shop in Karur offering a range of lighting products for different spaces and requirements. Explore our collection and contact us to enquire about specific products.</p>
+      </div>
+    </div>
+
+    <div class="reveal grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <div class="icon-circle mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+        <h3 class="h3 mb-1">A Range of Lighting Options</h3>
+        <p class="text-muted text-sm">From everyday LED bulbs to statement chandeliers, explore a variety of lighting styles.</p>
+      </div>
+      <div>
+        <div class="icon-circle mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <h3 class="h3 mb-1">Decorative &amp; Everyday Lighting</h3>
+        <p class="text-muted text-sm">Pieces for both practical lighting needs and decorative interior styling.</p>
+      </div>
+      <div>
+        <div class="icon-circle mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.4 8.4 8.3 8.3 0 0 1-4-1L3 20l1.1-5.7a8.3 8.3 0 0 1-1-4A8.4 8.4 0 0 1 11.5 2h.6A8.4 8.4 0 0 1 21 11.5z"/></svg></div>
+        <h3 class="h3 mb-1">Easy Product Enquiries</h3>
+        <p class="text-muted text-sm">Reach out on WhatsApp for pricing, availability and more details on any product.</p>
+      </div>
+      <div>
+        <div class="icon-circle mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 class="h3 mb-1">Visit Our Showroom</h3>
+        <p class="text-muted text-sm">See our lighting collection in person at our shop in Karur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section bg-surface2">
+  <div class="wrap max-w-3xl">
+    <div class="reveal mb-10">
+      <p class="eyebrow mb-3">FAQ</p>
+      <h2 class="h2">Frequently Asked Questions</h2>
+    </div>
+    <div class="flex flex-col gap-3" id="faqList"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-bg">
+  <div class="wrap grid lg:grid-cols-2 gap-12">
+    <div class="reveal">
+      <p class="eyebrow mb-3">Contact</p>
+      <h2 class="h2 mb-4">Looking for the Right Lighting?</h2>
+      <p class="lede mb-8">Tell us which lighting product you're interested in, and contact our team for more information.</p>
+
+      <div class="flex flex-col gap-5 mb-8">
+        <div class="flex items-start gap-3">
+          <div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <p class="font-semibold text-sm">Phone / WhatsApp</p>
+            <p class="text-muted text-sm" id="phoneDisplay"></p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <p class="font-semibold text-sm">Shop Address</p>
+            <p class="text-muted text-sm" id="addressDisplay"></p>
+            <a id="mapsLink" href="#" class="text-sm text-accent font-medium" target="_blank" rel="noopener">Open in Google Maps →</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></div>
+          <div>
+            <p class="font-semibold text-sm">Instagram</p>
+            <a id="instaLink" href="#" class="text-muted text-sm hover:text-accent" target="_blank" rel="noopener">@ledplanetkrr</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div>
+          <div>
+            <p class="font-semibold text-sm">Business Hours</p>
+            <p class="text-muted text-sm" id="hoursDisplay"></p>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-gold w-full sm:w-auto" onclick="openWhatsApp('Hello LED Planet, I would like to know more about your products.')">Chat on WhatsApp</button>
+    </div>
+
+    <form id="contactForm" class="card p-6 md:p-8" novalidate>
+      <div class="mb-4">
+        <label class="field-label" for="cf-name">Name *</label>
+        <input id="cf-name" name="name" class="input" required>
+        <p class="text-red-600 text-xs mt-1 hidden" data-error-for="cf-name">Please enter your name.</p>
+      </div>
+      <div class="mb-4">
+        <label class="field-label" for="cf-phone">Phone Number *</label>
+        <input id="cf-phone" name="phone" type="tel" class="input" required pattern="[0-9+\s-]{7,15}">
+        <p class="text-red-600 text-xs mt-1 hidden" data-error-for="cf-phone">Please enter a valid phone number.</p>
+      </div>
+      <div class="mb-4">
+        <label class="field-label" for="cf-category">Product / Category of Interest</label>
+        <select id="cf-category" name="category" class="input">
+          <option value="">Select a category (optional)</option>
+        </select>
+      </div>
+      <div class="mb-5">
+        <label class="field-label" for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" class="input" placeholder="Tell us what you're looking for…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-full">Send Enquiry via WhatsApp</button>
+      <p id="formNote" class="text-muted text-xs mt-3">This opens WhatsApp with your enquiry pre-filled — we don't receive a separate form submission. If WhatsApp doesn't open, message us directly using the phone number above.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal section" style="padding-block:56px">
+  <div class="wrap on-charcoal grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <p class="font-display font-semibold text-lg mb-3" style="color:var(--on-charcoal)">LED PLANET <span class="text-accent text-sm font-sans font-semibold">KRR</span></p>
+      <p class="text-sm text-muted">A lighting shop in Karur offering LED lights, hanging lights, chandeliers and decorative lamps for homes and spaces of every kind.</p>
+    </div>
+    <div>
+      <p class="font-semibold text-sm mb-3" style="color:var(--on-charcoal)">Quick Links</p>
+      <ul class="flex flex-col gap-2 text-sm text-muted">
+        <li><a href="#top" class="hover:text-accent">Home</a></li>
+        <li><a href="#categories" class="hover:text-accent">Categories</a></li>
+        <li><a href="#products" class="hover:text-accent">Products</a></li>
+        <li><a href="#about" class="hover:text-accent">About</a></li>
+        <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-sm mb-3" style="color:var(--on-charcoal)">Categories</p>
+      <ul id="footerCategoryLinks" class="flex flex-col gap-2 text-sm text-muted"></ul>
+    </div>
+    <div>
+      <p class="font-semibold text-sm mb-3" style="color:var(--on-charcoal)">Contact</p>
+      <ul class="flex flex-col gap-2 text-sm text-muted">
+        <li id="footerPhone"></li>
+        <li id="footerAddress"></li>
+        <li><a id="footerInsta" href="#" class="hover:text-accent" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap on-charcoal border-t border-token mt-10 pt-6 text-xs text-muted flex flex-col sm:flex-row sm:justify-between gap-2">
+    <span>© <span id="year"></span> LED Planet KRR. All rights reserved.</span>
+    <span>Developed by AALVINAI TECHNOLOGIES</span>
+  </div>
+</footer>
+
+<a href="#" id="waFab" class="wa-fab" aria-label="Chat with us on WhatsApp" style="transition:transform .15s ease">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.17h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.23-1.46-1.37-1.7-.14-.24-.01-.37.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.08s.9 2.41 1.02 2.58c.12.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.14-1.19-.06-.11-.23-.17-.48-.29z"/></svg>
+</a>
+
+<!-- PRODUCT MODAL -->
+<dialog id="productModal">
+  <div class="card" style="max-height:88vh;overflow:auto;border-radius:6px">
+    <div class="flex justify-between items-center p-4 border-b border-token">
+      <p class="font-semibold text-sm">Product Details</p>
+      <button onclick="document.getElementById('productModal').close()" aria-label="Close" class="icon-circle" style="width:34px;height:34px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="modalBody" class="p-5"></div>
+  </div>
+</dialog>
+
+<script>
+/* ---------- Business config — edit this block with the shop's real details ---------- */
+const SITE = {
+  name: "LED Planet KRR",
+  whatsappNumber: "910000000000",      // EDIT ME: digits only, country code + number, e.g. 919876543210
+  phoneDisplay: "+91 00000 00000",     // EDIT ME
+  address: "Add your shop's full address here (Street, Area, Karur, Tamil Nadu – PIN code)", // EDIT ME
+  mapsUrl: "https://maps.google.com/?q=LED+Planet+Karur", // EDIT ME: paste your Google Maps share link
+  instagram: "https://instagram.com/", // EDIT ME: full profile URL
+  instagramHandle: "@ledplanetkrr",    // EDIT ME
+  hours: "Add your business hours here (e.g. Mon–Sat, 10:00 AM – 8:30 PM)" // EDIT ME
+};
+
+const CATEGORIES = [
+  { id:"pendant",    name:"Hanging & Pendant Lights",            image:"images/cat-pendant.jpg",    desc:"Statement pendants and hanging fixtures for dining tables, living rooms and entryways." },
+  { id:"chandelier", name:"Chandeliers & Decorative Ceiling Lights", image:"images/cat-chandelier.jpg", desc:"Eye-catching ceiling centrepieces for living rooms, halls and special spaces." },
+  { id:"lamps",      name:"Decorative Lamps",                    image:"images/cat-lamps.jpg",      desc:"Floor lamps, table lamps and accent lighting that add warmth to any room." },
+  { id:"led",        name:"LED Bulbs & Tube Lights",             image:"images/cat-led.jpg",        desc:"Everyday LED lighting for homes, shops and offices." },
+  { id:"panel",      name:"Panel Lights & Downlights",           image:"images/cat-panel.jpg",      desc:"Clean, even lighting for ceilings, false ceilings and commercial spaces." },
+  { id:"wall",       name:"Wall & Accent Lights",                image:"images/cat-wall.jpg",       desc:"Wall-mounted fixtures and accent lighting for hallways, bedrooms and reading nooks." }
+];
+
+// Sample catalogue only — replace with real inventory, photos and (optionally) prices.
+const PRODUCTS = [
+  { id:1, name:"Modern Hanging Pendant", category:"pendant", image:"images/product-pendant-white.jpg", desc:"A clean single-drop pendant light that works well over dining tables or living spaces.", isSample:true },
+  { id:2, name:"Industrial Dome Pendant", category:"pendant", image:"images/product-pendant-teal.jpg", desc:"A classic dome-shaped pendant with a visible bulb, suited to dining and workspace settings.", isSample:true },
+  { id:3, name:"Decorative Ceiling Chandelier", category:"chandelier", image:"images/cat-chandelier.jpg", desc:"A layered ceiling chandelier that makes a strong visual statement in living and dining rooms.", isSample:true },
+  { id:4, name:"Contemporary Arc Floor Lamp", category:"lamps", image:"images/product-lamp-arc.jpg", desc:"A curved floor lamp that adds warm, ambient lighting beside a sofa or reading chair.", isSample:true },
+  { id:5, name:"LED Strip Light", category:"led", image:"images/cat-led.jpg", desc:"Flexible LED strip lighting for accenting shelves, ceilings and display areas.", isSample:true },
+  { id:6, name:"LED Panel / Downlight", category:"panel", image:"images/cat-panel.jpg", desc:"Recessed ceiling lighting for even, glare-free illumination in homes and offices.", isSample:true },
+  { id:7, name:"Decorative Wall Sconce", category:"wall", image:"images/product-wall-sconce.jpg", desc:"A compact wall-mounted fixture that adds accent lighting to hallways and bedrooms.", isSample:true },
+  { id:8, name:"Vintage Double-Arm Sconce", category:"wall", image:"images/product-pendant-twin.jpg", desc:"A decorative two-arm wall sconce that brings a classic, ornate touch to a room.", isSample:true }
+];
+
+const FAQS = [
+  { q:"What types of lighting products are available?", a:"We carry a range of lighting including LED bulbs and tube lights, hanging and pendant lights, chandeliers, decorative lamps, panel lights and wall lights. Browse the catalogue above or contact us for current stock." },
+  { q:"How can I enquire about a product's price?", a:"Prices aren't listed online. Tap “Enquire Now” on any product or message us on WhatsApp with the product name, and we'll share pricing directly." },
+  { q:"How can I check product availability?", a:"Availability can change, so please contact us on WhatsApp or by phone to confirm stock before visiting." },
+  { q:"Where is LED Planet located?", a:"We're located in Karur, Tamil Nadu. See the Contact section below for our address and map link." },
+  { q:"How can I contact the shop?", a:"You can reach us by phone, WhatsApp or Instagram — all listed in the Contact section below." },
+  { q:"How can I find out about product warranties?", a:"Warranty terms vary by product and brand. Please ask us directly about a specific product's warranty before purchase." }
+];
+
+let activeCategory = "all";
+
+function buildWaLink(message){
+  return "https://wa.me/" + SITE.whatsappNumber + "?text=" + encodeURIComponent(message);
+}
+function openWhatsApp(message){
+  const a = document.createElement("a");
+  a.href = buildWaLink(message);
+  a.target = "_blank";
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function toggleMobileMenu(){
+  const menu = document.getElementById("mobileMenu");
+  const btn = document.getElementById("menuBtn");
+  const isOpen = menu.style.maxHeight && menu.style.maxHeight !== "0px";
+  menu.style.maxHeight = isOpen ? "0px" : menu.scrollHeight + "px";
+  btn.setAttribute("aria-expanded", String(!isOpen));
+}
+function closeMobileMenu(){
+  const menu = document.getElementById("mobileMenu");
+  menu.style.maxHeight = "0px";
+  document.getElementById("menuBtn").setAttribute("aria-expanded", "false");
+}
+
+function renderCategories(){
+  const grid = document.getElementById("categoryGrid");
+  grid.innerHTML = CATEGORIES.map(c => `
+    <div class="card hover-zoom reveal overflow-hidden flex flex-col">
+      <div style="aspect-ratio:4/3;overflow:hidden">
+        <img src="${c.image}" alt="${c.name}" class="img-cover" loading="lazy">
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <h3 class="h3 mb-1">${c.name}</h3>
+        <p class="text-muted text-sm flex-1">${c.desc}</p>
+        <button class="mt-4 text-sm font-semibold text-accent self-start" onclick="filterByCategory('${c.id}')">Explore Category →</button>
+      </div>
+    </div>
+  `).join("");
+
+  const footerLinks = document.getElementById("footerCategoryLinks");
+  footerLinks.innerHTML = CATEGORIES.map(c => `<li><button class="hover:text-accent text-left" onclick="filterByCategory('${c.id}')">${c.name}</button></li>`).join("");
+}
+
+function renderChips(){
+  const chips = document.getElementById("categoryChips");
+  const all = [{id:"all", name:"All"}, ...CATEGORIES];
+  chips.innerHTML = all.map(c => `<button class="chip" aria-pressed="${activeCategory===c.id}" onclick="setCategory('${c.id}')">${c.name}</button>`).join("");
+}
+
+function setCategory(id){
+  activeCategory = id;
+  renderChips();
+  renderProducts();
+}
+
+function filterByCategory(id){
+  setCategory(id);
+  document.getElementById("products").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}
+
+function renderProducts(){
+  const term = document.getElementById("productSearch").value.trim().toLowerCase();
+  const list = PRODUCTS.filter(p => {
+    const matchesCategory = activeCategory === "all" || p.category === activeCategory;
+    const matchesTerm = !term || p.name.toLowerCase().includes(term) || p.desc.toLowerCase().includes(term);
+    return matchesCategory && matchesTerm;
+  });
+  const grid = document.getElementById("productGrid");
+  const noResults = document.getElementById("noResults");
+  grid.innerHTML = list.map(p => `
+    <div class="card hover-zoom flex flex-col overflow-hidden">
+      <button onclick="openProductModal(${p.id})" style="aspect-ratio:1/1;overflow:hidden" aria-label="View details for ${p.name}">
+        <img src="${p.image}" alt="${p.name}" class="img-cover" loading="lazy">
+      </button>
+      <div class="p-4 flex flex-col flex-1">
+        <span class="badge-sample self-start mb-2">Sample product</span>
+        <h3 class="font-semibold text-sm mb-1">${p.name}</h3>
+        <p class="text-muted text-xs mb-3">${categoryName(p.category)}</p>
+        <div class="mt-auto flex gap-2">
+          <button class="btn btn-outline-dark" style="flex:1;padding:9px 10px;font-size:.8rem" onclick="openProductModal(${p.id})">View Details</button>
+          <button class="btn btn-gold" style="flex:1;padding:9px 10px;font-size:.8rem" onclick="enquireProduct(${p.id})">Enquire</button>
+        </div>
+      </div>
+    </div>
+  `).join("");
+  noResults.hidden = list.length !== 0;
+}
+
+function categoryName(id){
+  const c = CATEGORIES.find(c => c.id === id);
+  return c ? c.name : "";
+}
+
+function openProductModal(id){
+  const p = PRODUCTS.find(p => p.id === id);
+  if(!p) return;
+  document.getElementById("modalBody").innerHTML = `
+    <div style="aspect-ratio:4/3;overflow:hidden;border-radius:4px" class="mb-4">
+      <img src="${p.image}" alt="${p.name}" class="img-cover">
+    </div>
+    <span class="badge-sample">Sample product</span>
+    <h3 class="h3 mt-2 mb-1">${p.name}</h3>
+    <p class="text-muted text-sm mb-1">${categoryName(p.category)}</p>
+    <p class="text-sm mb-1" style="color:var(--fg)">Price: on enquiry</p>
+    <p class="text-muted text-sm mt-3 mb-5">${p.desc}</p>
+    <button class="btn btn-gold w-full" onclick="enquireProduct(${p.id})">Enquire Now</button>
+  `;
+  document.getElementById("productModal").showModal();
+}
+
+function enquireProduct(id){
+  const p = PRODUCTS.find(p => p.id === id);
+  if(!p) return;
+  openWhatsApp(`Hello LED Planet, I would like to know more about the ${p.name}. Could you please share the price and availability?`);
+}
+
+function renderFaqs(){
+  document.getElementById("faqList").innerHTML = FAQS.map(f => `
+    <details class="faq-item card p-5">
+      <summary class="flex items-center justify-between gap-4 font-semibold text-sm">
+        <span>${f.q}</span>
+        <svg class="chev flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <p class="faq-body text-muted text-sm">${f.a}</p>
+    </details>
+  `).join("");
+}
+
+function fillSiteInfo(){
+  document.getElementById("phoneDisplay").textContent = SITE.phoneDisplay;
+  document.getElementById("addressDisplay").textContent = SITE.address;
+  document.getElementById("mapsLink").href = SITE.mapsUrl;
+  document.getElementById("instaLink").href = SITE.instagram;
+  document.getElementById("instaLink").textContent = SITE.instagramHandle;
+  document.getElementById("hoursDisplay").textContent = SITE.hours;
+  document.getElementById("waFab").href = buildWaLink("Hello LED Planet, I would like to enquire about your lighting products.");
+  document.getElementById("waFab").onclick = function(e){ e.preventDefault(); openWhatsApp("Hello LED Planet, I would like to enquire about your lighting products."); };
+  document.getElementById("footerPhone").textContent = SITE.phoneDisplay;
+  document.getElementById("footerAddress").textContent = SITE.address;
+  document.getElementById("footerInsta").href = SITE.instagram;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const select = document.getElementById("cf-category");
+  CATEGORIES.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c.name; opt.textContent = c.name;
+    select.appendChild(opt);
+  });
+  const other = document.createElement("option");
+  other.value = "Other"; other.textContent = "Other";
+  select.appendChild(other);
+}
+
+function setupContactForm(){
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById("cf-name");
+    const phone = document.getElementById("cf-phone");
+    document.querySelectorAll("[data-error-for]").forEach(el => el.classList.add("hidden"));
+
+    if(!name.value.trim()){
+      valid = false;
+      document.querySelector('[data-error-for="cf-name"]').classList.remove("hidden");
+    }
+    const phonePattern = /^[0-9+\s-]{7,15}$/;
+    if(!phonePattern.test(phone.value.trim())){
+      valid = false;
+      document.querySelector('[data-error-for="cf-phone"]').classList.remove("hidden");
+    }
+    if(!valid) return;
+
+    const category = document.getElementById("cf-category").value;
+    const message = document.getElementById("cf-message").value.trim();
+    let text = `Hello LED Planet, my name is ${name.value.trim()} (${phone.value.trim()}).`;
+    if(category) text += ` I'm interested in: ${category}.`;
+    if(message) text += ` ${message}`;
+    openWhatsApp(text);
+
+    const note = document.getElementById("formNote");
+    note.textContent = "Opening WhatsApp with your enquiry… If it doesn't open automatically, message us directly using the phone number above.";
+    note.style.color = "var(--accent)";
+  });
+}
+
+function setupReveal(){
+  const els = document.querySelectorAll(".reveal");
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+  els.forEach(el => el.classList.add("pre"));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.remove("pre");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+
+renderCategories();
+renderChips();
+renderProducts();
+renderFaqs();
+fillSiteInfo();
+setupContactForm();
+setupReveal();
+</script>
