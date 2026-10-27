@@ -119,14 +119,19 @@ p{margin:0}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
 .brand{display:flex;align-items:center;gap:11px;min-width:0}
 .brand img{width:46px;height:46px;border-radius:50%}
-.brand-name{font-family:var(--font-display);font-weight:900;font-size:1.25rem;line-height:1;color:var(--brand);letter-spacing:.02em}
+.brand-name{display:block;font-size:1.25rem;line-height:1;color:var(--brand)}
+/* LED PLANET wordmark, redrawn from the shop signboard lettering */
+.wm{position:relative;display:inline-block;vertical-align:baseline}
+.wm svg{display:block;height:.71em;width:calc(.71em * 8.569);fill:currentColor}
+.brand-name .wm svg{height:.95em;width:calc(.95em * 8.569)}
+.muted .wm,.lede .wm{color:var(--brand)}
 .brand-tag{display:block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:4px}
 .nav-links{display:flex;align-items:center;gap:28px;font-family:var(--font-display);font-weight:700;font-size:.95rem}
 .nav-links a{position:relative;padding-block:6px}
 .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--brand);transform:scaleX(0);transition:transform .2s ease}
 .nav-links a:hover{color:var(--brand)}
 .nav-links a:hover::after{transform:scaleX(1)}
-@media (max-width:420px){.brand-tag{font-size:.58rem;letter-spacing:.07em}.brand-name{font-size:1.12rem}}
+@media (max-width:420px){.brand-tag{font-size:.58rem;letter-spacing:.07em}.brand-name{font-size:1.05rem}}
 .menu-btn{display:none;width:44px;height:44px;border-radius:10px;align-items:center;justify-content:center;background:var(--surface-2);color:var(--brand)}
 .mobile-menu{display:none}
 @media (max-width:960px){
@@ -330,6 +335,7 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <path id="wm" d="M0 0L19.5 0L19.5 62L19.5 63.4L19.7 64.9L19.9 66.3L20.2 67.7L20.7 69.1L21.2 70.4L21.8 71.7L22.4 73L23.2 74.2L24 75.4L25 76.5L25.9 77.6L27 78.5L28.1 79.5L29.3 80.3L30.5 81.1L31.8 81.7L33.1 82.3L34.4 82.8L35.8 83.3L37.2 83.6L38.6 83.8L40.1 84L41.5 84L69.5 84L69.5 100L40 100L37.4 99.9L34.8 99.7L32.2 99.2L29.6 98.6L27.1 97.9L24.7 97L22.3 95.9L20 94.6L17.8 93.3L15.6 91.7L13.6 90.1L11.7 88.3L9.9 86.4L8.3 84.4L6.7 82.2L5.4 80L4.1 77.7L3 75.3L2.1 72.9L1.4 70.4L0.8 67.8L0.3 65.2L0.1 62.6L0 60ZM114.5 0L153.3 0L153.3 16L116 16L114.6 16L113.1 16.2L111.7 16.4L110.3 16.7L108.9 17.2L107.6 17.7L106.3 18.3L105 18.9L103.8 19.7L102.6 20.5L101.5 21.5L100.4 22.4L99.5 23.5L98.5 24.6L97.7 25.8L96.9 27L96.3 28.3L95.7 29.6L95.2 30.9L94.7 32.3L94.4 33.7L94.2 35.1L94 36.6L94 38L94 41.5L153.3 41.5L153.3 57.5L94 57.5L94 62L94 63.4L94.2 64.9L94.4 66.3L94.7 67.7L95.2 69.1L95.7 70.4L96.3 71.7L96.9 73L97.7 74.2L98.5 75.4L99.5 76.5L100.4 77.6L101.5 78.5L102.6 79.5L103.8 80.3L105 81.1L106.3 81.7L107.6 82.3L108.9 82.8L110.3 83.3L111.7 83.6L113.1 83.8L114.6 84L116 84L153.3 84L153.3 100L114.5 100L111.9 99.9L109.3 99.7L106.7 99.2L104.1 98.6L101.6 97.9L99.2 97L96.8 95.9L94.5 94.6L92.3 93.3L90.1 91.7L88.1 90.1L86.2 88.3L84.4 86.4L82.8 84.4L81.2 82.2L79.9 80L78.6 77.7L77.5 75.3L76.6 72.9L75.9 70.4L75.3 67.8L74.8 65.2L74.6 62.6L74.5 60L74.5 40L74.6 37.4L74.8 34.8L75.3 32.2L75.9 29.6L76.6 27.1L77.5 24.7L78.6 22.3L79.9 20L81.2 17.8L82.8 15.6L84.4 13.6L86.2 11.7L88.1 9.9L90.1 8.3L92.3 6.7L94.5 5.4L96.8 4.1L99.2 3L101.6 2.1L104.1 1.4L106.7 0.8L109.3 0.3L111.9 0.1L114.5 0ZM172.2 0L216.6 0L219.5 0.1L222.5 0.4L225.4 0.9L228.2 1.5L231.1 2.4L233.8 3.4L236.5 4.6L239.1 6L241.6 7.6L244 9.3L246.3 11.2L248.4 13.2L250.4 15.3L252.3 17.6L254 20L255.6 22.5L257 25.1L258.2 27.8L259.2 30.5L260.1 33.4L260.7 36.2L261.2 39.1L261.5 42.1L261.6 45L261.6 55L261.5 57.9L261.2 60.9L260.7 63.8L260.1 66.6L259.2 69.5L258.2 72.2L257 74.9L255.6 77.5L254 80L252.3 82.4L250.4 84.7L248.4 86.8L246.3 88.8L244 90.7L241.6 92.4L239.1 94L236.5 95.4L233.8 96.6L231.1 97.6L228.2 98.5L225.4 99.1L222.5 99.6L219.5 99.9L216.6 100L172.2 100ZM317.9 0L370.5 0L372.6 0.1L374.7 0.3L376.8 0.6L378.9 1.1L380.9 1.7L382.9 2.5L384.9 3.4L386.8 4.4L388.6 5.5L390.3 6.7L391.9 8.1L393.5 9.5L394.9 11.1L396.3 12.7L397.5 14.4L398.6 16.2L399.6 18.1L400.5 20.1L401.3 22.1L401.9 24.1L402.4 26.2L402.7 28.3L402.9 30.4L403 32.5L402.9 34.6L402.7 36.7L402.4 38.8L401.9 40.9L401.3 42.9L400.5 44.9L399.6 46.9L398.6 48.8L397.5 50.6L396.3 52.3L394.9 53.9L393.5 55.5L391.9 56.9L390.3 58.3L388.6 59.5L386.8 60.6L384.9 61.6L382.9 62.5L380.9 63.3L378.9 63.9L376.8 64.4L374.7 64.7L372.6 64.9L370.5 65L337.4 65L337.4 100L317.9 100ZM415.9 0L435.4 0L435.4 62L435.4 63.4L435.6 64.9L435.8 66.3L436.1 67.7L436.6 69.1L437.1 70.4L437.7 71.7L438.3 73L439.1 74.2L439.9 75.4L440.9 76.5L441.8 77.6L442.9 78.5L444 79.5L445.2 80.3L446.4 81.1L447.7 81.7L449 82.3L450.3 82.8L451.7 83.3L453.1 83.6L454.5 83.8L456 84L457.4 84L483.4 84L483.4 100L455.9 100L453.3 99.9L450.7 99.7L448.1 99.2L445.5 98.6L443 97.9L440.6 97L438.2 95.9L435.9 94.6L433.7 93.3L431.5 91.7L429.5 90.1L427.6 88.3L425.8 86.4L424.2 84.4L422.6 82.2L421.3 80L420 77.7L418.9 75.3L418 72.9L417.3 70.4L416.7 67.8L416.2 65.2L416 62.6L415.9 60ZM521.6 0L540.6 0L581.3 100L562.7 100L552.7 75.5L509.5 75.5L499.5 100L480.9 100ZM589.7 0L609.2 0L609.2 100L589.7 100ZM653.6 0L673.1 0L673.1 100L653.6 100ZM596.2 0L613.9 0L668.9 100L652 100ZM727.7 0L766 0L766 16L729.2 16L727.8 16L726.3 16.2L724.9 16.4L723.5 16.7L722.1 17.2L720.8 17.7L719.5 18.3L718.2 18.9L717 19.7L715.8 20.5L714.7 21.5L713.6 22.4L712.7 23.5L711.7 24.6L710.9 25.8L710.1 27L709.5 28.3L708.9 29.6L708.4 30.9L707.9 32.3L707.6 33.7L707.4 35.1L707.2 36.6L707.2 38L707.2 41.5L766 41.5L766 57.5L707.2 57.5L707.2 62L707.2 63.4L707.4 64.9L707.6 66.3L707.9 67.7L708.4 69.1L708.9 70.4L709.5 71.7L710.1 73L710.9 74.2L711.7 75.4L712.7 76.5L713.6 77.6L714.7 78.5L715.8 79.5L717 80.3L718.2 81.1L719.5 81.7L720.8 82.3L722.1 82.8L723.5 83.3L724.9 83.6L726.3 83.8L727.8 84L729.2 84L766 84L766 100L727.7 100L725.1 99.9L722.5 99.7L719.9 99.2L717.3 98.6L714.8 97.9L712.4 97L710 95.9L707.7 94.6L705.5 93.3L703.3 91.7L701.3 90.1L699.4 88.3L697.6 86.4L696 84.4L694.4 82.2L693.1 80L691.8 77.7L690.7 75.3L689.8 72.9L689.1 70.4L688.5 67.8L688 65.2L687.8 62.6L687.7 60L687.7 40L687.8 37.4L688 34.8L688.5 32.2L689.1 29.6L689.8 27.1L690.7 24.7L691.8 22.3L693.1 20L694.4 17.8L696 15.6L697.6 13.6L699.4 11.7L701.3 9.9L703.3 8.3L705.5 6.7L707.7 5.4L710 4.1L712.4 3L714.8 2.1L717.3 1.4L719.9 0.8L722.5 0.3L725.1 0.1L727.7 0ZM774.8 0L856.9 0L856.9 16L774.8 16ZM806.1 15L825.6 15L825.6 100L806.1 100ZM191.7 16L191.7 84L216.6 84L218.2 83.9L219.9 83.8L221.5 83.5L223.1 83.1L224.6 82.7L226.2 82.1L227.7 81.4L229.1 80.7L230.5 79.8L231.8 78.8L233.1 77.8L234.3 76.7L235.4 75.5L236.4 74.2L237.4 72.9L238.3 71.5L239 70.1L239.7 68.6L240.3 67L240.7 65.5L241.1 63.9L241.4 62.3L241.5 60.6L241.6 59L241.6 41L241.5 39.4L241.4 37.7L241.1 36.1L240.7 34.5L240.3 33L239.7 31.4L239 29.9L238.3 28.5L237.4 27.1L236.4 25.8L235.4 24.5L234.3 23.3L233.1 22.2L231.8 21.2L230.5 20.2L229.1 19.3L227.7 18.6L226.2 17.9L224.6 17.3L223.1 16.9L221.5 16.5L219.9 16.2L218.2 16.1L216.6 16ZM337.4 17L337.4 49L364.6 49L365.6 49L366.7 48.9L367.7 48.7L368.7 48.5L369.7 48.2L370.7 47.8L371.7 47.3L372.6 46.9L373.5 46.3L374.3 45.7L375.1 45L375.9 44.3L376.6 43.5L377.3 42.7L377.9 41.9L378.5 41L378.9 40.1L379.4 39.1L379.8 38.1L380.1 37.1L380.3 36.1L380.5 35.1L380.6 34L380.6 33L380.6 32L380.5 30.9L380.3 29.9L380.1 28.9L379.8 27.9L379.4 26.9L378.9 25.9L378.5 25L377.9 24.1L377.3 23.3L376.6 22.5L375.9 21.7L375.1 21L374.3 20.3L373.5 19.7L372.6 19.1L371.7 18.7L370.7 18.2L369.7 17.8L368.7 17.5L367.7 17.3L366.7 17.1L365.6 17L364.6 17ZM531.1 22.3L515.9 59.6L546.3 59.6Z"/>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></symbol>
@@ -369,7 +375,7 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
     <a class="brand" href="#top" aria-label="LED PLANET home">
       <img src="images/logo.jpg" alt="" width="46" height="46">
       <span>
-        <span class="brand-name">LED PLANET</span>
+        <span class="brand-name"><span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span></span>
         <span class="brand-tag">Exclusive Lighting Solutions</span>
       </span>
     </a>
@@ -405,7 +411,7 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
   <div class="wrap">
     <div class="reveal">
       <p class="hero-tamil" lang="ta">எல் இ டி பிளானட்</p>
-      <p class="eyebrow">LED PLANET · Exclusive Lighting Solutions</p>
+      <p class="eyebrow"><span><span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span> · Exclusive Lighting Solutions</span></p>
       <h1 class="h1" id="hero-title" style="margin-top:14px">Illuminate Your World.</h1>
       <p class="hero-text">We provide all kinds of LED lighting and smart solutions for home, residential and commercial projects. Discover stylish LED lights, statement hanging lights, chandeliers and decorative lamps at our showroom in Karur.</p>
       <div class="hero-actions">
@@ -495,7 +501,7 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
     <div class="about-text reveal">
       <p class="eyebrow">About Us</p>
       <h2 class="h2" id="about-title">Lighting That Fits Your Space</h2>
-      <p class="muted" style="margin-top:16px">LED PLANET is a lighting showroom in Karur offering exclusive lighting solutions. We provide all kinds of LED lighting and smart solutions for home, residential and commercial projects.</p>
+      <p class="muted" style="margin-top:16px"><span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span> is a lighting showroom in Karur offering exclusive lighting solutions. We provide all kinds of LED lighting and smart solutions for home, residential and commercial projects.</p>
       <p class="muted">Walk in to see our range of hanging lights, chandeliers, decorative lamps, panel lights and everyday LED lighting, or message us on WhatsApp to ask about a specific product.</p>
       <div class="facts">
         <div class="fact"><svg class="icon"><use href="#i-bulb"/></svg><div><strong>All kinds of LED lighting</strong><span>Everyday and decorative</span></div></div>
@@ -521,8 +527,8 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
   <div class="wrap">
     <div class="section-head reveal" style="margin-inline:auto;text-align:center">
       <p class="eyebrow">Our Team</p>
-      <h2 class="h2" id="team-title">The People Behind LED PLANET</h2>
-      <p class="lede" style="margin-inline:auto">Meet the co-founders of LED PLANET.</p>
+      <h2 class="h2" id="team-title">The People Behind <span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span></h2>
+      <p class="lede" style="margin-inline:auto">Meet the co-founders of <span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span>.</p>
     </div>
     <div class="team-grid reveal">
       <article class="card member">
@@ -623,7 +629,7 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
       <div>
         <a class="brand" href="#top" aria-label="LED PLANET home">
           <img src="images/logo.jpg" alt="" width="46" height="46" loading="lazy">
-          <span><span class="brand-name">LED PLANET</span><span class="brand-tag">Exclusive Lighting Solutions</span></span>
+          <span><span class="brand-name"><span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span></span><span class="brand-tag">Exclusive Lighting Solutions</span></span>
         </a>
         <p class="footer-about">All kinds of LED lighting and smart solutions for home, residential and commercial projects, from our showroom in Karur.</p>
         <div class="socials">
@@ -657,7 +663,7 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> LED PLANET, Karur. All rights reserved.</span>
+      <span>© <span id="year">2026</span> <span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span>, Karur. All rights reserved.</span>
       <span>Developed by AALVINAI TECHNOLOGIES</span>
     </div>
   </div>
@@ -726,6 +732,8 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const WORDMARK = '<span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span>';
+const brand = s => esc(s).split("LED PLANET").join(WORDMARK);
 
 function waLink(message){
   return "https://wa.me/" + SITE.whatsappNumber + "?text=" + encodeURIComponent(message);
@@ -838,8 +846,8 @@ function openProductModal(id){
 function renderFaqs(){
   $("#faqList").innerHTML = FAQS.map(f => `
     <details class="faq reveal">
-      <summary>${esc(f.q)}<svg class="icon"><use href="#i-chev"/></svg></summary>
-      <p class="faq-body">${esc(f.a)}</p>
+      <summary><span>${brand(f.q)}</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+      <p class="faq-body">${brand(f.a)}</p>
     </details>`).join("");
 }
 
