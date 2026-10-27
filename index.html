@@ -363,12 +363,12 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
 <div class="topbar">
   <div class="wrap">
     <div class="topbar-left">
-      <a href="tel:+919894959523" data-phone-link><svg class="icon"><use href="#i-phone"/></svg><span data-phone></span></a>
+      <a href="tel:+919894959523"><svg class="icon"><use href="#i-phone"/></svg>+91 98949 59523</a>
       <a class="topbar-hide-sm" href="#contact"><svg class="icon"><use href="#i-pin"/></svg>Bharathi Nagar Main Road, Karur</a>
     </div>
     <div class="topbar-right">
-      <a data-insta href="#" target="_blank" rel="noopener"><svg class="icon"><use href="#i-insta"/></svg><span class="topbar-hide-sm">@LEDPLANETKRR</span><span class="sr-only">Instagram</span></a>
-      <a data-fb href="#" target="_blank" rel="noopener"><svg class="icon"><use href="#i-fb"/></svg><span class="topbar-hide-sm">@LEDPLANETKRR</span><span class="sr-only">Facebook</span></a>
+      <a href="https://www.instagram.com/ledplanetkrr/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-insta"/></svg><span class="topbar-hide-sm">@LEDPLANETKRR</span><span class="sr-only">Instagram</span></a>
+      <a href="https://www.facebook.com/ledplanetkrr" target="_blank" rel="noopener"><svg class="icon"><use href="#i-fb"/></svg><span class="topbar-hide-sm">@LEDPLANETKRR</span><span class="sr-only">Facebook</span></a>
     </div>
   </div>
 </div>
@@ -471,7 +471,56 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
       <h2 class="h2" id="cat-title">Explore Our Lighting Collection</h2>
       <p class="lede">Find the right lighting for your space, style and needs. Pick a category to see matching products.</p>
     </div>
-    <div class="cat-grid" id="categoryGrid"></div>
+    <div class="cat-grid" id="categoryGrid">
+      <a class="card cat-card reveal" href="#products" data-category="pendant">
+        <div class="zoom"><img src="images/cat-pendant.jpg" alt="Black cylinder pendant lights with a warm glow" width="800" height="600" loading="lazy" decoding="async"></div>
+        <div class="cat-body">
+          <h3 class="h3">Hanging &amp; Pendant Lights</h3>
+          <p>Statement pendants and hanging fixtures for dining tables, living rooms, staircases and entryways.</p>
+          <span class="cat-link">Explore Category <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="card cat-card reveal" href="#products" data-category="chandelier">
+        <div class="zoom"><img src="images/cat-chandelier.jpg" alt="Crystal drum chandelier above a dining table" width="800" height="533" loading="lazy" decoding="async"></div>
+        <div class="cat-body">
+          <h3 class="h3">Chandeliers &amp; Decorative Ceiling Lights</h3>
+          <p>Eye-catching ceiling centrepieces for living rooms, halls and special spaces.</p>
+          <span class="cat-link">Explore Category <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="card cat-card reveal" href="#products" data-category="lamps">
+        <div class="zoom"><img src="images/cat-lamps.jpg" alt="Black floor lamp beside a sofa and dresser" width="800" height="534" loading="lazy" decoding="async"></div>
+        <div class="cat-body">
+          <h3 class="h3">Decorative Lamps</h3>
+          <p>Floor lamps, table lamps and accent lighting that add warmth to any room.</p>
+          <span class="cat-link">Explore Category <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="card cat-card reveal" href="#products" data-category="led">
+        <div class="zoom"><img src="images/cat-led.jpg" alt="Glowing blue LED strip light" width="800" height="533" loading="lazy" decoding="async"></div>
+        <div class="cat-body">
+          <h3 class="h3">LED Bulbs &amp; Tube Lights</h3>
+          <p>Everyday LED bulbs, tube lights and strip lights for homes, shops and offices.</p>
+          <span class="cat-link">Explore Category <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="card cat-card reveal" href="#products" data-category="panel">
+        <div class="zoom"><img src="images/cat-panel.jpg" alt="Round LED panel lights and downlights on a ceiling" width="800" height="533" loading="lazy" decoding="async"></div>
+        <div class="cat-body">
+          <h3 class="h3">Panel Lights &amp; Downlights</h3>
+          <p>Clean, even lighting for ceilings, false ceilings and commercial spaces.</p>
+          <span class="cat-link">Explore Category <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="card cat-card reveal" href="#products" data-category="wall">
+        <div class="zoom"><img src="images/cat-wall.jpg" alt="Modern black and copper wall light" width="800" height="533" loading="lazy" decoding="async"></div>
+        <div class="cat-body">
+          <h3 class="h3">Wall &amp; Accent Lights</h3>
+          <p>Wall-mounted fixtures and accent lighting for hallways, bedrooms and reading corners.</p>
+          <span class="cat-link">Explore Category <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -554,7 +603,36 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
       <p class="eyebrow">FAQ</p>
       <h2 class="h2" id="faq-title">Frequently Asked Questions</h2>
     </div>
-    <div class="faq-list" id="faqList"></div>
+    <div class="faq-list" id="faqList">
+      <details class="faq reveal">
+        <summary><span>What types of lighting products are available?</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <p class="faq-body">We provide all kinds of LED lighting and smart solutions, including LED bulbs and tube lights, hanging and pendant lights, chandeliers, decorative lamps, panel lights, downlights and wall lights. Browse the catalogue above, or message us for what's in stock right now.</p>
+      </details>
+      <details class="faq reveal">
+        <summary><span>How can I enquire about a product's price?</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <p class="faq-body">Prices aren't listed online because they depend on the model and quantity. Tap “Enquire” on any product or message us on WhatsApp at +91 98949 59523 with the product name, and we'll share the price.</p>
+      </details>
+      <details class="faq reveal">
+        <summary><span>How can I check product availability?</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <p class="faq-body">Stock changes often, so please message us on WhatsApp or call +91 98949 59523 to confirm availability before you visit.</p>
+      </details>
+      <details class="faq reveal">
+        <summary><span>Where is <span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span> located?</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <p class="faq-body">Our showroom is at 51/3,4, Bharathi Nagar Main Road, Karur – 639002, behind Max showroom and opposite V Care. Use the Get Directions button in the Contact section to open it in Google Maps.</p>
+      </details>
+      <details class="faq reveal">
+        <summary><span>Do you handle residential and commercial projects?</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <p class="faq-body">Yes. We supply LED lighting and smart solutions for homes, residential projects and commercial projects. Share your requirement on WhatsApp and our team will get back to you.</p>
+      </details>
+      <details class="faq reveal">
+        <summary><span>How can I find out about product warranties?</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <p class="faq-body">Warranty terms depend on the product and brand. Ask us about the specific product you're interested in and we'll explain its warranty before you buy.</p>
+      </details>
+      <details class="faq reveal">
+        <summary><span>How can I contact the shop?</span><svg class="icon"><use href="#i-chev"/></svg></summary>
+        <p class="faq-body">Call or WhatsApp +91 98949 59523, follow us on Instagram and Facebook at @LEDPLANETKRR, or visit the showroom in Bharathi Nagar, Karur.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -567,31 +645,31 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
       <div class="contact-list">
         <div class="contact-item">
           <div class="ico"><svg class="icon"><use href="#i-phone"/></svg></div>
-          <div><strong>Phone / WhatsApp</strong><a class="link" href="tel:+919894959523" data-phone-link><span data-phone></span></a></div>
+          <div><strong>Phone / WhatsApp</strong><a class="link" href="tel:+919894959523">+91 98949 59523</a></div>
         </div>
         <div class="contact-item">
           <div class="ico"><svg class="icon"><use href="#i-pin"/></svg></div>
           <div>
             <strong>Showroom Address</strong>
-            <span data-address></span><br>
-            <span data-landmark></span>
+            <span>51/3,4, Bharathi Nagar Main Road, Karur – 639002, Tamil Nadu</span><br>
+            <span>Landmark: Behind Max showroom, opposite V Care</span>
           </div>
         </div>
         <div class="contact-item">
           <div class="ico"><svg class="icon"><use href="#i-insta"/></svg></div>
-          <div><strong>Instagram</strong><a class="link" data-insta href="#" target="_blank" rel="noopener">@LEDPLANETKRR</a></div>
+          <div><strong>Instagram</strong><a class="link" href="https://www.instagram.com/ledplanetkrr/" target="_blank" rel="noopener">@LEDPLANETKRR</a></div>
         </div>
         <div class="contact-item">
           <div class="ico"><svg class="icon"><use href="#i-fb"/></svg></div>
-          <div><strong>Facebook</strong><a class="link" data-fb href="#" target="_blank" rel="noopener">@LEDPLANETKRR</a></div>
+          <div><strong>Facebook</strong><a class="link" href="https://www.facebook.com/ledplanetkrr" target="_blank" rel="noopener">@LEDPLANETKRR</a></div>
         </div>
       </div>
       <div class="contact-actions">
         <button class="btn btn-wa" type="button" data-wa="Hello LED PLANET, I would like to know more about your products."><svg class="icon"><use href="#i-wa"/></svg>Chat on WhatsApp</button>
-        <a class="btn btn-line" data-maps href="#" target="_blank" rel="noopener"><svg class="icon"><use href="#i-nav"/></svg>Get Directions</a>
+        <a class="btn btn-line" href="https://maps.app.goo.gl/dqZphdJS6tNqA3Sz9" target="_blank" rel="noopener"><svg class="icon"><use href="#i-nav"/></svg>Get Directions</a>
       </div>
       <div class="map">
-        <iframe data-map-embed title="Map showing LED PLANET, Bharathi Nagar Main Road, Karur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://maps.google.com/maps?q=Solar+Galaxy,+MAX+SHOWROOM+Backside,+51/5,+Bharathi+Nagar+Main+Rd,+Karur,+Tamil+Nadu+639002&amp;ftid=0x3baa2f1ac54c417d:0xcd5568c16b44a8c3&amp;z=17&amp;output=embed" title="Map showing LED PLANET, Bharathi Nagar Main Road, Karur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
@@ -646,8 +724,8 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
         </a>
         <p class="footer-about">All kinds of LED lighting and smart solutions for home, residential and commercial projects, from our showroom in Karur.</p>
         <div class="socials">
-          <a data-insta href="#" target="_blank" rel="noopener" aria-label="LED PLANET on Instagram"><svg class="icon"><use href="#i-insta"/></svg></a>
-          <a data-fb href="#" target="_blank" rel="noopener" aria-label="LED PLANET on Facebook"><svg class="icon"><use href="#i-fb"/></svg></a>
+          <a href="https://www.instagram.com/ledplanetkrr/" target="_blank" rel="noopener" aria-label="LED PLANET on Instagram"><svg class="icon"><use href="#i-insta"/></svg></a>
+          <a href="https://www.facebook.com/ledplanetkrr" target="_blank" rel="noopener" aria-label="LED PLANET on Facebook"><svg class="icon"><use href="#i-fb"/></svg></a>
           <button type="button" data-wa="Hello LED PLANET, I would like to enquire about your lighting products." aria-label="Chat with LED PLANET on WhatsApp" style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff"><svg class="icon"><use href="#i-wa"/></svg></button>
         </div>
       </div>
@@ -664,14 +742,21 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
       </div>
       <div>
         <h3>Categories</h3>
-        <ul id="footerCategories"></ul>
+        <ul id="footerCategories">
+          <li><a href="#products" data-category="pendant">Hanging &amp; Pendant Lights</a></li>
+          <li><a href="#products" data-category="chandelier">Chandeliers &amp; Decorative Ceiling Lights</a></li>
+          <li><a href="#products" data-category="lamps">Decorative Lamps</a></li>
+          <li><a href="#products" data-category="led">LED Bulbs &amp; Tube Lights</a></li>
+          <li><a href="#products" data-category="panel">Panel Lights &amp; Downlights</a></li>
+          <li><a href="#products" data-category="wall">Wall &amp; Accent Lights</a></li>
+        </ul>
       </div>
       <div>
         <h3>Contact</h3>
         <ul>
-          <li><a href="tel:+919894959523" data-phone-link><span data-phone></span></a></li>
-          <li data-address></li>
-          <li><a data-maps href="#" target="_blank" rel="noopener">Open in Google Maps</a></li>
+          <li><a href="tel:+919894959523">+91 98949 59523</a></li>
+          <li>51/3,4, Bharathi Nagar Main Road, Karur – 639002, Tamil Nadu</li>
+          <li><a href="https://maps.app.goo.gl/dqZphdJS6tNqA3Sz9" target="_blank" rel="noopener">Open in Google Maps</a></li>
         </ul>
       </div>
     </div>
@@ -695,28 +780,9 @@ dialog::backdrop{background:rgba(3,17,56,.6)}
 </dialog>
 
 <script>
-/* ---------- Business details: edit here, used everywhere on the page ---------- */
-const SITE = {
-  name: "LED PLANET",
-  whatsappNumber: "919894959523",
-  phoneDisplay: "+91 98949 59523",
-  phoneHref: "tel:+919894959523",
-  address: "51/3,4, Bharathi Nagar Main Road, Karur – 639002, Tamil Nadu",
-  landmark: "Behind Max showroom, opposite V Care",
-  mapsUrl: "https://maps.app.goo.gl/dqZphdJS6tNqA3Sz9",
-  mapEmbed: "https://maps.google.com/maps?q=Solar+Galaxy,+MAX+SHOWROOM+Backside,+51/5,+Bharathi+Nagar+Main+Rd,+Karur,+Tamil+Nadu+639002&ftid=0x3baa2f1ac54c417d:0xcd5568c16b44a8c3&z=17&output=embed",
-  instagram: "https://www.instagram.com/ledplanetkrr/",
-  facebook: "https://www.facebook.com/ledplanetkrr"
-};
-
-const CATEGORIES = [
-  { id:"pendant",    name:"Hanging & Pendant Lights",                image:"images/cat-pendant.jpg",    desc:"Statement pendants and hanging fixtures for dining tables, living rooms, staircases and entryways." },
-  { id:"chandelier", name:"Chandeliers & Decorative Ceiling Lights", image:"images/cat-chandelier.jpg", desc:"Eye-catching ceiling centrepieces for living rooms, halls and special spaces." },
-  { id:"lamps",      name:"Decorative Lamps",                        image:"images/cat-lamps.jpg",      desc:"Floor lamps, table lamps and accent lighting that add warmth to any room." },
-  { id:"led",        name:"LED Bulbs & Tube Lights",                 image:"images/cat-led.jpg",        desc:"Everyday LED bulbs, tube lights and strip lights for homes, shops and offices." },
-  { id:"panel",      name:"Panel Lights & Downlights",               image:"images/cat-panel.jpg",      desc:"Clean, even lighting for ceilings, false ceilings and commercial spaces." },
-  { id:"wall",       name:"Wall & Accent Lights",                    image:"images/cat-wall.jpg",       desc:"Wall-mounted fixtures and accent lighting for hallways, bedrooms and reading corners." }
-];
+// Phone, address, map and social links are written directly in the HTML above so that
+// search engines and link previews can read them without running this script.
+const SITE = { whatsappNumber: "919894959523" };
 
 // Sample products with stock photos. Replace with real stock, photos and (optional) prices.
 const PRODUCTS = [
@@ -730,23 +796,13 @@ const PRODUCTS = [
   { id:8, name:"Vintage Double-Arm Sconce",     category:"wall",       image:"images/product-wall-vintage.jpg",  desc:"A decorative two-arm wall sconce that brings a classic, ornate touch to a room." }
 ];
 
-const FAQS = [
-  { q:"What types of lighting products are available?", a:"We provide all kinds of LED lighting and smart solutions, including LED bulbs and tube lights, hanging and pendant lights, chandeliers, decorative lamps, panel lights, downlights and wall lights. Browse the catalogue above, or message us for what's in stock right now." },
-  { q:"How can I enquire about a product's price?", a:"Prices aren't listed online because they depend on the model and quantity. Tap “Enquire” on any product or message us on WhatsApp at +91 98949 59523 with the product name, and we'll share the price." },
-  { q:"How can I check product availability?", a:"Stock changes often, so please message us on WhatsApp or call +91 98949 59523 to confirm availability before you visit." },
-  { q:"Where is LED PLANET located?", a:"Our showroom is at 51/3,4, Bharathi Nagar Main Road, Karur – 639002, behind Max showroom and opposite V Care. Use the Get Directions button in the Contact section to open it in Google Maps." },
-  { q:"Do you handle residential and commercial projects?", a:"Yes. We supply LED lighting and smart solutions for homes, residential projects and commercial projects. Share your requirement on WhatsApp and our team will get back to you." },
-  { q:"How can I find out about product warranties?", a:"Warranty terms depend on the product and brand. Ask us about the specific product you're interested in and we'll explain its warranty before you buy." },
-  { q:"How can I contact the shop?", a:"Call or WhatsApp +91 98949 59523, follow us on Instagram and Facebook at @LEDPLANETKRR, or visit the showroom in Bharathi Nagar, Karur." }
-];
-
 let activeCategory = "all";
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+// Category names come from the category cards in the HTML.
+const CATEGORIES = $$("#categoryGrid [data-category]").map(el => ({ id: el.dataset.category, name: el.querySelector("h3").textContent }));
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const WORDMARK = '<span class="wm"><svg viewBox="0 0 856.9 100" aria-hidden="true" focusable="false"><use href="#wm"/></svg><span class="sr-only">LED PLANET</span></span>';
-const brand = s => esc(s).split("LED PLANET").join(WORDMARK);
 
 function waLink(message){
   return "https://wa.me/" + SITE.whatsappNumber + "?text=" + encodeURIComponent(message);
@@ -765,18 +821,8 @@ function categoryName(id){
   return c ? c.name : "";
 }
 
-function fillSiteInfo(){
-  $$("[data-phone]").forEach(el => el.textContent = SITE.phoneDisplay);
-  $$("[data-phone-link]").forEach(el => el.href = SITE.phoneHref);
-  $$("[data-address]").forEach(el => el.textContent = SITE.address);
-  $$("[data-landmark]").forEach(el => el.textContent = "Landmark: " + SITE.landmark);
-  $$("[data-maps]").forEach(el => el.href = SITE.mapsUrl);
-  $$("[data-insta]").forEach(el => el.href = SITE.instagram);
-  $$("[data-fb]").forEach(el => el.href = SITE.facebook);
-  const map = $("[data-map-embed]");
-  if (map) map.src = SITE.mapEmbed;
+function setupFormOptions(){
   $("#year").textContent = new Date().getFullYear();
-
   const select = $("#cf-category");
   [...CATEGORIES.map(c => c.name), "Smart lighting solutions", "Home / residential project", "Commercial project", "Other"].forEach(name => {
     const opt = document.createElement("option");
@@ -784,20 +830,6 @@ function fillSiteInfo(){
     opt.textContent = name;
     select.appendChild(opt);
   });
-}
-
-function renderCategories(){
-  $("#categoryGrid").innerHTML = CATEGORIES.map(c => `
-    <a class="card cat-card reveal" href="#products" data-category="${c.id}">
-      <div class="zoom"><img src="${c.image}" alt="" width="1200" height="900" loading="lazy"></div>
-      <div class="cat-body">
-        <h3 class="h3">${esc(c.name)}</h3>
-        <p>${esc(c.desc)}</p>
-        <span class="cat-link">Explore Category <svg class="icon"><use href="#i-arrow"/></svg></span>
-      </div>
-    </a>`).join("");
-  $("#footerCategories").innerHTML = CATEGORIES.map(c =>
-    `<li><button type="button" data-category="${c.id}" style="text-align:left">${esc(c.name)}</button></li>`).join("");
 }
 
 function renderChips(){
@@ -854,14 +886,6 @@ function openProductModal(id){
     <p class="prod-price" style="margin-top:12px">Price on enquiry · Availability confirmed on WhatsApp</p>
     <button class="btn btn-amber" type="button" data-enquire="${p.id}"><svg class="icon"><use href="#i-wa"/></svg>Enquire Now</button>`;
   $("#productModal").showModal();
-}
-
-function renderFaqs(){
-  $("#faqList").innerHTML = FAQS.map(f => `
-    <details class="faq reveal">
-      <summary><span>${brand(f.q)}</span><svg class="icon"><use href="#i-chev"/></svg></summary>
-      <p class="faq-body">${brand(f.a)}</p>
-    </details>`).join("");
 }
 
 function setupMenu(){
@@ -966,11 +990,9 @@ function setupReveal(){
   els.forEach(el => io.observe(el));
 }
 
-fillSiteInfo();
-renderCategories();
+setupFormOptions();
 renderChips();
 renderProducts();
-renderFaqs();
 setupMenu();
 setupForm();
 setupEvents();
